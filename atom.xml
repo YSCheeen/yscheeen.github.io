@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nickfan.com/"/>
-  <updated>2022-04-11T09:09:38.734Z</updated>
+  <updated>2022-04-11T09:10:30.811Z</updated>
   <id>https://blog.nickfan.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.nickfan.com/shopify-domain-settings/"/>
     <id>https://blog.nickfan.com/shopify-domain-settings/</id>
     <published>2022-04-11T08:54:10.000Z</published>
-    <updated>2022-04-11T09:09:38.734Z</updated>
+    <updated>2022-04-11T09:10:30.811Z</updated>
     
-    <content type="html"><![CDATA[<p>Shopify 的 domain 配置支持的平台有 godaddy ，google domain 等，但是如果你的域名是在阿里云或者其他第三方平台配置，则需要自己手动的配置解析规则。</p><p>需要的配置内容如下：</p><a id="more"></a><p>####配置一条 CNAME 记录:</p><p><strong>主机记录</strong>    www</p><p><strong>记录类型</strong>    CNAME</p><p><strong>记录值</strong>      shops.myshopify.com</p><p><strong>TTL</strong>           使用默认值</p><p>####再配置一条 A 记录，所有 Shopify 店铺都可以使用这个 IP</p><p><strong>主机记录</strong>     @</p><p><strong>记录类型</strong>    A</p><p><strong>记录值</strong>      23.227.38.65</p><p><strong>TTL</strong>           使用默认值</p><p>我的配置如下：</p><p><img src="../img/shopify-domain-settings/image-20220411170757233.png" alt="image-20220411170757233"></p>]]></content>
+    <content type="html"><![CDATA[<p>Shopify 的 domain 配置支持的平台有 godaddy ，google domain 等，但是如果你的域名是在阿里云或者其他第三方平台配置，则需要自己手动的配置解析规则。</p><p>需要的配置内容如下：</p><a id="more"></a><p>####配置一条 CNAME 记录</p><p><strong>主机记录</strong>    www</p><p><strong>记录类型</strong>    CNAME</p><p><strong>记录值</strong>      shops.myshopify.com</p><p><strong>TTL</strong>           使用默认值</p><p>####再配置一条 A 记录，所有 Shopify 店铺都可以使用这个 IP</p><p><strong>主机记录</strong>     @</p><p><strong>记录类型</strong>    A</p><p><strong>记录值</strong>      23.227.38.65</p><p><strong>TTL</strong>           使用默认值</p><p>我的配置如下：</p><p><img src="../img/shopify-domain-settings/image-20220411170757233.png" alt="image-20220411170757233"></p>]]></content>
     
     <summary type="html">
     
