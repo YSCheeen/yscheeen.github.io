@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.nickfan.com/shopify-theme-extensions-instuction/</loc>
-    
-    <lastmod>2022-04-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.nickfan.com/my-frist-post/</loc>
-    
-    <lastmod>2022-04-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.nickfan.com/about/index.html</loc>
     
     <lastmod>2022-04-11</lastmod>
@@ -55,20 +37,6 @@
   </url>
 
   
-  <url>
-    <loc>https://blog.nickfan.com/tags/test/</loc>
-    <lastmod>2022-04-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://blog.nickfan.com/categories/FP/</loc>
-    <lastmod>2022-04-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>
