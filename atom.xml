@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nickfan.com/"/>
-  <updated>2022-04-11T02:11:11.544Z</updated>
+  <updated>2022-04-11T02:12:51.110Z</updated>
   <id>https://blog.nickfan.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.nickfan.com/my-frist-post/"/>
     <id>https://blog.nickfan.com/my-frist-post/</id>
     <published>2022-04-10T16:45:38.000Z</published>
-    <updated>2022-04-11T02:11:11.544Z</updated>
+    <updated>2022-04-11T02:12:51.110Z</updated>
     
     <content type="html"><![CDATA[<p>测试<br>test</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Helloworld！！</span><br></pre></td></tr></table></figure><img src="../img/my-frist-post/image-20220411092254477.png" alt="image-20220411092254477" style="zoom:50%;" />]]></content>
     
@@ -36,6 +36,14 @@
     </summary>
     
     
+      <category term="FP" scheme="https://blog.nickfan.com/categories/FP/"/>
+    
+    
+      <category term="FP" scheme="https://blog.nickfan.com/tags/FP/"/>
+    
+      <category term="React" scheme="https://blog.nickfan.com/tags/React/"/>
+    
+      <category term="Redux" scheme="https://blog.nickfan.com/tags/Redux/"/>
     
   </entry>
   
