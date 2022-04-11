@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nickfan.com/"/>
-  <updated>2022-04-11T01:58:04.801Z</updated>
+  <updated>2022-04-11T01:58:51.464Z</updated>
   <id>https://blog.nickfan.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>my-frist-post</title>
+    <title>测试</title>
     <link href="https://blog.nickfan.com/my-frist-post/"/>
     <id>https://blog.nickfan.com/my-frist-post/</id>
     <published>2022-04-10T16:45:38.000Z</published>
-    <updated>2022-04-11T01:58:04.801Z</updated>
+    <updated>2022-04-11T01:58:51.464Z</updated>
     
     <content type="html"><![CDATA[<p>测试<br>test</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Helloworld！！</span><br></pre></td></tr></table></figure><p><img src="../img/my-frist-post/image-20220411092254477.png" alt="image-20220411092254477"></p>]]></content>
     
