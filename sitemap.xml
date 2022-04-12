@@ -74,13 +74,6 @@
 
   
   <url>
-    <loc>https://blog.nickfan.com/tags/%E5%88%9B%E4%B8%9A/</loc>
-    <lastmod>2022-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.nickfan.com/tags/Shopify/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -88,7 +81,21 @@
   </url>
   
   <url>
+    <loc>https://blog.nickfan.com/tags/%E4%B8%BB%E9%A2%98/</loc>
+    <lastmod>2022-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.nickfan.com/tags/%E7%8B%AC%E7%AB%8B%E7%AB%99/</loc>
+    <lastmod>2022-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nickfan.com/tags/%E5%88%9B%E4%B8%9A/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
