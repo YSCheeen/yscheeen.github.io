@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Shopify 自定义域名设置 | Nick Fan | Code is Antidote</title>
+
+  
+  <meta name="author" content="Nick Fan">
+  
+
+  
+  <meta name="description" content="Shopify 的 domain 配置支持的平台有 godaddy ，google domain 等，但是如果你的域名是在阿里云或者其他第三方平台配置，则需要自己手动的配置解析规则。
+需要的配置内容如下：">
+  
+
+  
+  
+  <meta name="keywords" content="Shopify,独立站">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Shopify 自定义域名设置"/>
+
+  <meta property="og:site_name" content="Nick Fan"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Nick Fan" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">
+        Nick Fan
+      </a>
+    </h1>
+    <p class="site-description">
+      
+        Code is Antidote
+          
+    </p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li> <a href="/">
+            主页
+          </a>
+          
+        <li> <a href="/archives">
+            归档
+          </a>
+          
+        <li> <a href="/about">
+            关于
+          </a>
+          
+        </li>
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Shopify 自定义域名设置</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/shopify-domain-settings/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-04-11T08:54:10.000Z">
+          2022-04-11
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>Shopify 的 domain 配置支持的平台有 godaddy ，google domain 等，但是如果你的域名是在阿里云或者其他第三方平台配置，则需要自己手动的配置解析规则。</p>
+<p>需要的配置内容如下：</p>
+<a id="more"></a>
+
+<h4 id="配置一条-CNAME-记录"><a href="#配置一条-CNAME-记录" class="headerlink" title="配置一条 CNAME 记录"></a>配置一条 CNAME 记录</h4><p><strong>主机记录</strong>    www</p>
+<p><strong>记录类型</strong>    CNAME</p>
+<p><strong>记录值</strong>      shops.myshopify.com</p>
+<p><strong>TTL</strong>           使用默认值</p>
+<h4 id="再配置一条-A-记录，所有-Shopify-店铺都可以使用这个-IP"><a href="#再配置一条-A-记录，所有-Shopify-店铺都可以使用这个-IP" class="headerlink" title="再配置一条 A 记录，所有 Shopify 店铺都可以使用这个 IP"></a>再配置一条 A 记录，所有 Shopify 店铺都可以使用这个 IP</h4><p><strong>主机记录</strong>     @</p>
+<p><strong>记录类型</strong>    A</p>
+<p><strong>记录值</strong>      23.227.38.65</p>
+<p><strong>TTL</strong>           使用默认值</p>
+<p>我的配置如下：</p>
+<p><img src="../img/shopify-domain-settings/image-20220411170757233.png" alt="image-20220411170757233"></p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/Shopify/">Shopify</a><a href="/tags/独立站/">独立站</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+		
+				
+						
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+
+    <a href="/atom.xml" target="_blank">
+      订阅
+    </a>
+
+    </br>
+    
+      &copy; 2022
+        Nick Fan
+          
+  </p>
+</footer>
+    
+    
+  </div>
+</div>
+</body>
+</html>
