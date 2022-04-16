@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Shopify Liquid语法 | Nick Fan | Code is Antidote</title>
+
+  
+  <meta name="author" content="Nick Fan">
+  
+
+  
+  <meta name="description" content="Liquid 基本语法123&amp;#123;&amp;#123; &amp;#125;&amp;#125; 表示输出。&amp;#123;%%&amp;#125; 表示逻辑和控制流。">
+  
+
+  
+  
+  <meta name="keywords" content="Shopify,Liquid">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Shopify Liquid语法"/>
+
+  <meta property="og:site_name" content="Nick Fan"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Nick Fan" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">
+        Nick Fan
+      </a>
+    </h1>
+    <p class="site-description">
+      
+        Code is Antidote
+          
+    </p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li> <a href="/">
+            主页
+          </a>
+          
+        <li> <a href="/archives">
+            归档
+          </a>
+          
+        <li> <a href="/about">
+            关于
+          </a>
+          
+        </li>
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Shopify Liquid语法</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/shopify-liquid/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-04-16T09:52:26.000Z">
+          2022-04-16
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h3 id="Liquid-基本语法"><a href="#Liquid-基本语法" class="headerlink" title="Liquid 基本语法"></a>Liquid 基本语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; &#125;&#125; 表示输出。</span><br><span class="line"></span><br><span class="line">&#123;%%&#125; 表示逻辑和控制流。</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; product.title &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果当前页面中有 product  对象，则是可以显示商品的名称。</p>
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p><a href="https://shopify.dev/api/liquid/tags" target="_blank" rel="noopener">Liquid 标签</a>用于为模板创建逻辑和控制流。花括号百分比分隔符<code>&amp;#123;&amp;#37; &amp;#37;&amp;#125;</code>和它们包围的文本在呈现网页时不会产生任何可见的输出。这使您可以分配变量并创建条件或循环，而无需在页面上显示任何 Liquid 逻辑。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if product.available %&#125;</span><br><span class="line">&lt;h2&gt;Price: $99.99&lt;&#x2F;h2&gt;</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">&lt;h2 class&#x3D;&quot;sold-out&quot;&gt;Sorry, this product is sold out.&lt;&#x2F;h2&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果产品有货，则显示价格，如果没有货则显示售罄。</p>
+<h3 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h3><p><a href="https://shopify.dev/api/liquid/filters" target="_blank" rel="noopener">液体过滤器</a>用于修改数字、字符串、对象和变量的输出。它们被放置在一个输出标签<code>&amp;#123;&amp;#123; &amp;#125;&amp;#125;</code>中，并由一个竖线字符表示<code>|</code>。</p>
+<p>一个简单的例子是<code>capitalize</code>字符串过滤器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; &#39;hello, world!&#39; | capitalize &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>会输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello, world!</span><br></pre></td></tr></table></figure>
+
+<p>可以在一个输出上使用多个过滤器，它们从左到右应用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; &#39;hello, world!&#39; | capitalize | remove: &quot;world&quot; &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>字符串首先大写，然后<code>world</code>删除单词。输出将是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello, !</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/Shopify/">Shopify</a><a href="/tags/Liquid/">Liquid</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+	<section id="comment" class="comment">
+		<div id="gitalk-container"></div>
+	</section>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script>
+		var gitalk = new Gitalk({
+			clientID: 'a3fb7aef11208df3ec75',
+			clientSecret: '36fb9b40c44bd5d4837188cb0bb6cc2178539e56',
+			repo: 'nickblog',
+			owner: 'FanNick',
+			admin: ['FanNick'],
+			id: location.pathname,
+			distractionFreeMode: false
+		})
+
+		gitalk.render('gitalk-container')
+	</script>
+	
+		
+				
+						
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+
+    <a href="/atom.xml" target="_blank">
+      订阅
+    </a>
+
+    </br>
+    
+      &copy; 2022
+        Nick Fan
+          
+  </p>
+</footer>
+<script type="text/javascript">
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", "bhtw5prp9y");
+</script>
+    
+    
+  </div>
+</div>
+</body>
+</html>

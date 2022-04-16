@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Shopify Liquid 数据过滤器 | Nick Fan | Code is Antidote</title>
+
+  
+  <meta name="author" content="Nick Fan">
+  
+
+  
+  <meta name="description" content="join将数组元素与作为参数传递的字符连接起来。结果是一个字符串。
+1&amp;#123;&amp;#123; product.tags | join: &amp;#39;, &amp;#39; &amp;#125;&amp;#125;
+
+输出：
+1tag1, tag2, tag3">
+  
+
+  
+  
+  <meta name="keywords" content="">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Shopify Liquid 数据过滤器"/>
+
+  <meta property="og:site_name" content="Nick Fan"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Nick Fan" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">
+        Nick Fan
+      </a>
+    </h1>
+    <p class="site-description">
+      
+        Code is Antidote
+          
+    </p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li> <a href="/">
+            主页
+          </a>
+          
+        <li> <a href="/archives">
+            归档
+          </a>
+          
+        <li> <a href="/about">
+            关于
+          </a>
+          
+        </li>
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Shopify Liquid 数据过滤器</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/shopify-liquid-array-filters/" rel="bookmark">
+        <time class="entry-date published" datetime="2022-04-16T10:07:15.000Z">
+          2022-04-16
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h3 id="join"><a href="#join" class="headerlink" title="join"></a>join</h3><p>将数组元素与作为参数传递的字符连接起来。结果是一个字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; product.tags | join: &#39;, &#39; &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tag1, tag2, tag3</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h3 id="first"><a href="#first" class="headerlink" title="first"></a>first</h3><p> 返回数组第一个元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- product.tags &#x3D; &quot;sale&quot;, &quot;mens&quot;, &quot;womens&quot;, &quot;awesome&quot; --&gt;</span><br><span class="line">&#123;&#123; product.tags | first &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sale</span><br></pre></td></tr></table></figure>
+
+<p>当你在标签里使用<code>first</code> 时，可以用点表示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if product.tags.first &#x3D;&#x3D; &quot;sale&quot; %&#125;</span><br><span class="line">  This product is on sale!</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="last"><a href="#last" class="headerlink" title="last"></a>last</h3><p>返回数组的最后一个元素。</p>
+<p>使用方法与 first 一致</p>
+<h3 id="contat"><a href="#contat" class="headerlink" title="contat"></a>contat</h3><p>将一个数组与另一个数组连接（组合）。结果数组包含原始数组的所有元素。不会删除重复的元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% assign fruits &#x3D; &quot;apples, oranges, peaches, tomatoes&quot; | split: &quot;, &quot; %&#125;</span><br><span class="line">&#123;% assign vegetables &#x3D; &quot;broccoli, carrots, lettuce, tomatoes&quot; | split: &quot;, &quot; %&#125;</span><br><span class="line">&#123;% assign plants &#x3D; fruits | concat: vegetables %&#125;</span><br><span class="line">&#123;&#123; plants | join: &quot;, &quot; &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p> 输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apples, oranges, peaches, tomatoes, broccoli, carrots, lettuce, tomatoes</span><br></pre></td></tr></table></figure>
+
+<p>您可以将多个过滤器串在一起<code>concat</code>以组合两个以上的数组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% assign fruits &#x3D; &quot;apples, oranges, peaches&quot; | split: &quot;, &quot; %&#125;</span><br><span class="line">&#123;% assign vegetables &#x3D; &quot;broccoli, carrots, lettuce&quot; | split: &quot;, &quot; %&#125;</span><br><span class="line">&#123;% assign animals &#x3D; &quot;dogs, cats, birds&quot; | split: &quot;, &quot; %&#125;</span><br><span class="line">&#123;% assign things &#x3D; fruits | concat: vegetables | concat: animals %&#125;</span><br><span class="line">&#123;&#123; things | join: &quot;, &quot; &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apples, oranges, peaches, broccoli, carrots, lettuce, dogs, cats, birds</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="index"><a href="#index" class="headerlink" title="index"></a>index</h3><p>返回数组中指定索引位置的项目。请注意，数组编号从零开始，因此数组中的第一项被引用<code>[0]</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- product.tags &#x3D; &quot;sale&quot;, &quot;mens&quot;, &quot;womens&quot;, &quot;awesome&quot; --&gt;</span><br><span class="line">&#123;&#123; product.tags[2] &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">womens</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p>接受数组元素的属性作为参数，并根据每个数组元素的值创建一个数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- collection.title &#x3D; &quot;Spring&quot;, &quot;Summer&quot;, &quot;Fall&quot;, &quot;Winter&quot; --&gt;</span><br><span class="line">&#123;% assign collection_titles &#x3D; collections | map: &#39;title&#39; %&#125;</span><br><span class="line">&#123;&#123; collection_titles &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SpringSummerFallWinter</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h3><p>反转数组中项目的顺序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% assign my_array &#x3D; &quot;apples, oranges, peaches, plums&quot; | split: &quot;, &quot; %&#125;</span><br><span class="line">&#123;&#123; my_array | reverse | join: &quot;, &quot; &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plums, peaches, oranges, apples</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="size"><a href="#size" class="headerlink" title="size"></a>size</h3><p>返回字符串（字符数）或数组（元素数）的大小。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; &#39;The quick brown fox jumps over a lazy dog.&#39; | size &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">42</span><br></pre></td></tr></table></figure>
+
+
+
+<p><a href="https://shopify.dev/api/liquid/tags" target="_blank" rel="noopener">当您需要在标签</a><code>size</code>内使用过滤器时，可以使用点表示法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if collections.frontpage.products.size &gt; 10 %&#125;</span><br><span class="line">  There are more than 10 products in this collection!</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h3><p>按数组中元素的给定属性对数组元素进行排序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% assign products &#x3D; collection.products | sort: &#39;price&#39; %&#125;</span><br><span class="line">&#123;% for product in products %&#125;</span><br><span class="line">  &lt;h4&gt;&#123;&#123; product.title &#125;&#125;&lt;&#x2F;h4&gt;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>排序数组的顺序区分大小写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- products &#x3D; &quot;a&quot;, &quot;b&quot;, &quot;A&quot;, &quot;B&quot; --&gt;</span><br><span class="line">&#123;% assign products &#x3D; collection.products | sort: &#39;title&#39; %&#125;</span><br><span class="line">&#123;% for product in products %&#125;</span><br><span class="line">   &#123;&#123; product.title &#125;&#125;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="where"><a href="#where" class="headerlink" title="where"></a>where</h3><p>创建一个数组，其中仅包含具有给定属性值的对象，或者默认情况下任何 <code>true</code>值。</p>
+<p>像是一种filter.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">All products:</span><br><span class="line">&#123;% for product in collection.products %&#125;</span><br><span class="line">- &#123;&#123; product.title &#125;&#125;</span><br><span class="line">&#123;% endfor %&#125;</span><br><span class="line">&#123;% assign kitchen_products &#x3D; collection.products | where: &quot;type&quot;, &quot;kitchen&quot; %&#125;</span><br><span class="line">Kitchen products:</span><br><span class="line">&#123;% for product in kitchen_products %&#125;</span><br><span class="line">- &#123;&#123; product.title &#125;&#125;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">All products:</span><br><span class="line">- Vacuum</span><br><span class="line">- Spatula</span><br><span class="line">- Television</span><br><span class="line">- Garlic press</span><br><span class="line">Kitchen products:</span><br><span class="line">- Spatula</span><br><span class="line">- Garlic press</span><br></pre></td></tr></table></figure>
+
+
+
+<p><a href="https://shopify.dev/api/liquid/basics/types#boolean" target="_blank" rel="noopener">当属性为boolean</a>或<a href="https://shopify.dev/api/liquid/basics/true-and-false#truthy" target="_blank" rel="noopener">truthy</a>时，您可以使用<code>where</code>没有目标值的属性名称。例如，产品的<a href="https://shopify.dev/api/liquid/objects/product#product-available" target="_blank" rel="noopener">属性</a>。<a href="https://shopify.dev/api/liquid/objects/product#product-available" target="_blank" rel="noopener"><code>available</code></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% assign available_products &#x3D; collection.products | where: &quot;available&quot; %&#125;</span><br><span class="line">Available products:</span><br><span class="line">&#123;% for product in available_products %&#125;</span><br><span class="line">- &#123;&#123; product.title &#125;&#125;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="uniq"><a href="#uniq" class="headerlink" title="uniq"></a>uniq</h3><p>删除数组中元素的任何重复元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% assign fruits &#x3D; &quot;orange apple banana apple orange&quot; %&#125;</span><br><span class="line">&#123;&#123; fruits | split: &#39; &#39; | uniq | join: &#39; &#39; &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orange apple banana</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+	<section id="comment" class="comment">
+		<div id="gitalk-container"></div>
+	</section>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script>
+		var gitalk = new Gitalk({
+			clientID: 'a3fb7aef11208df3ec75',
+			clientSecret: '36fb9b40c44bd5d4837188cb0bb6cc2178539e56',
+			repo: 'nickblog',
+			owner: 'FanNick',
+			admin: ['FanNick'],
+			id: location.pathname,
+			distractionFreeMode: false
+		})
+
+		gitalk.render('gitalk-container')
+	</script>
+	
+		
+				
+						
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+
+    <a href="/atom.xml" target="_blank">
+      订阅
+    </a>
+
+    </br>
+    
+      &copy; 2022
+        Nick Fan
+          
+  </p>
+</footer>
+<script type="text/javascript">
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", "bhtw5prp9y");
+</script>
+    
+    
+  </div>
+</div>
+</body>
+</html>
