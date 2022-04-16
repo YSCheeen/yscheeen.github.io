@@ -5,9 +5,9 @@
   <subtitle>Code is Antidote</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://blog.nickfan.com/"/>
+  <link href="https://fannick.github.io/"/>
   <updated>2022-04-15T07:06:40.003Z</updated>
-  <id>https://blog.nickfan.com/</id>
+  <id>https://fannick.github.io/</id>
   
   <author>
     <name>Nick Fan</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Shopify 主题收集 (116 个主题)</title>
-    <link href="https://blog.nickfan.com/shopify-themes/"/>
-    <id>https://blog.nickfan.com/shopify-themes/</id>
+    <link href="https://fannick.github.io/shopify-themes/"/>
+    <id>https://fannick.github.io/shopify-themes/</id>
     <published>2022-04-12T04:17:15.000Z</published>
     <updated>2022-04-15T07:06:40.003Z</updated>
     
@@ -33,16 +33,16 @@
     
     
     
-      <category term="Shopify" scheme="https://blog.nickfan.com/tags/Shopify/"/>
+      <category term="Shopify" scheme="https://fannick.github.io/tags/Shopify/"/>
     
-      <category term="主题" scheme="https://blog.nickfan.com/tags/%E4%B8%BB%E9%A2%98/"/>
+      <category term="主题" scheme="https://fannick.github.io/tags/%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>Shopify 自定义域名设置</title>
-    <link href="https://blog.nickfan.com/shopify-domain-settings/"/>
-    <id>https://blog.nickfan.com/shopify-domain-settings/</id>
+    <link href="https://fannick.github.io/shopify-domain-settings/"/>
+    <id>https://fannick.github.io/shopify-domain-settings/</id>
     <published>2022-04-11T08:54:10.000Z</published>
     <updated>2022-04-11T09:11:25.326Z</updated>
     
@@ -57,16 +57,16 @@
     
     
     
-      <category term="Shopify" scheme="https://blog.nickfan.com/tags/Shopify/"/>
+      <category term="Shopify" scheme="https://fannick.github.io/tags/Shopify/"/>
     
-      <category term="独立站" scheme="https://blog.nickfan.com/tags/%E7%8B%AC%E7%AB%8B%E7%AB%99/"/>
+      <category term="独立站" scheme="https://fannick.github.io/tags/%E7%8B%AC%E7%AB%8B%E7%AB%99/"/>
     
   </entry>
   
   <entry>
     <title>深圳市创业补贴申请指南</title>
-    <link href="https://blog.nickfan.com/startup-compass/"/>
-    <id>https://blog.nickfan.com/startup-compass/</id>
+    <link href="https://fannick.github.io/startup-compass/"/>
+    <id>https://fannick.github.io/startup-compass/</id>
     <published>2022-04-11T05:14:17.000Z</published>
     <updated>2022-04-11T05:20:43.046Z</updated>
     
@@ -81,14 +81,14 @@
     
     
     
-      <category term="创业" scheme="https://blog.nickfan.com/tags/%E5%88%9B%E4%B8%9A/"/>
+      <category term="创业" scheme="https://fannick.github.io/tags/%E5%88%9B%E4%B8%9A/"/>
     
   </entry>
   
   <entry>
     <title>Shopify Theme extensions 使用 （一）</title>
-    <link href="https://blog.nickfan.com/shopify-theme-extensions-instuction/"/>
-    <id>https://blog.nickfan.com/shopify-theme-extensions-instuction/</id>
+    <link href="https://fannick.github.io/shopify-theme-extensions-instuction/"/>
+    <id>https://fannick.github.io/shopify-theme-extensions-instuction/</id>
     <published>2022-04-11T04:48:58.000Z</published>
     <updated>2022-04-11T05:11:53.499Z</updated>
     
@@ -102,10 +102,10 @@
     </summary>
     
     
-      <category term="技术" scheme="https://blog.nickfan.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://fannick.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Shopify" scheme="https://blog.nickfan.com/tags/Shopify/"/>
+      <category term="Shopify" scheme="https://fannick.github.io/tags/Shopify/"/>
     
   </entry>
   
