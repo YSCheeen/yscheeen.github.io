@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fannick.github.io/"/>
-  <updated>2022-04-16T10:30:41.005Z</updated>
+  <updated>2022-04-21T04:35:52.314Z</updated>
   <id>https://fannick.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shopify App Billing 接口更新 - 新增基于使用量收费功能</title>
+    <link href="https://fannick.github.io/shopify-app-billing-update/"/>
+    <id>https://fannick.github.io/shopify-app-billing-update/</id>
+    <published>2022-04-19T04:05:58.000Z</published>
+    <updated>2022-04-21T04:35:52.314Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h3><p>我在 Shopify 上架的 app 一直使用的接口版本是基于 2021-10 的版本，最新了版本已经更新至 2022-04，刚好需要开发一个折扣功能。可以使用一下新接口了。</p><p>两个新功能</p><a id="more"></a><h4 id="一、折扣功能"><a href="#一、折扣功能" class="headerlink" title="一、折扣功能"></a>一、折扣功能</h4><p>之前的接口，如果要针对某个套餐给用户一个优惠折扣，接口是没有办法做到了，现在使用新版本，就可以实现</p><p>GraphQL 语法如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">mutation &#123;</span><br><span class="line">    appSubscriptionCreate(</span><br><span class="line">      name: &quot;30 Day Recurring Plan&quot;,</span><br><span class="line">      returnUrl: &quot;https:&#x2F;&#x2F;review-app.shopifyapps.com&quot;,</span><br><span class="line">      lineItems: [&#123;</span><br><span class="line">        plan: &#123;</span><br><span class="line">          appRecurringPricingDetails: &#123;</span><br><span class="line">             price: &#123; amount: 40.00, currencyCode: USD &#125;,</span><br><span class="line">             discount: &#123; value: &#123; percentage: 0.2 &#125;, durationLimitInIntervals: 10 &#125;,</span><br><span class="line">             interval: EVERY_30_DAYS</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;]</span><br><span class="line">    ) &#123;</span><br><span class="line">      confirmationUrl,</span><br><span class="line">      appSubscription &#123;</span><br><span class="line">        ID,</span><br><span class="line">      &#125;,</span><br><span class="line">      userErrors &#123; field, message &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>返回为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;data&quot;: &#123;</span><br><span class="line">      &quot;appSubscriptionCreate&quot;: &#123;</span><br><span class="line">        &quot;confirmationUrl&quot;:        &quot;https:&#x2F;&#x2F;&#123;shop&#125;.myshopify.com&#x2F;admin&#x2F;charges&#x2F;4019552312&#x2F;confirm_recurring_application_charge?signature&#x3D;BAh7BzoHaWRsKwc4gJXvOhJhdXRvX2FjdGl2YXRlVA%3D%3D--74e39487ff00313ca4409dea7ab00081001c45d5&quot;,</span><br><span class="line">        &quot;appSubscription&quot;: &#123;</span><br><span class="line">          &quot;ID&quot;: &quot;gid:&#x2F;&#x2F;shopify&#x2F;AppSubscription&#x2F;4019552312&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;userErrors&quot;: []</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>用户支付时，可以看到如下信息</p><p><img src="../img/shopify-app-billing-update/image-20220421122930246.png" alt="image-20220421122930246"></p><h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h4><ul><li>discount  里的 percentage 是折扣多少，比如你设置为 0.2 ，则是优惠 20% 相当于打 8 折，设置 1 相当于这个套餐为免费的。设置为 0 则没有优惠。</li><li>durationLimitInIntervals 为优惠的期数，设置为 0 ，则只要用户不取消套餐，每个月都会按折扣价支付，如果设置为 12， 则用户在使用 12 期后，价格恢复正常。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;更新内容&quot;&gt;&lt;a href=&quot;#更新内容&quot; class=&quot;headerlink&quot; title=&quot;更新内容&quot;&gt;&lt;/a&gt;更新内容&lt;/h3&gt;&lt;p&gt;我在 Shopify 上架的 app 一直使用的接口版本是基于 2021-10 的版本，最新了版本已经更新至 2022-04，刚好需要开发一个折扣功能。可以使用一下新接口了。&lt;/p&gt;
+&lt;p&gt;两个新功能&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Shopify" scheme="https://fannick.github.io/tags/Shopify/"/>
+    
+      <category term="Shopify 收费接口" scheme="https://fannick.github.io/tags/Shopify-%E6%94%B6%E8%B4%B9%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>Shopify Liquid 数据过滤器</title>
