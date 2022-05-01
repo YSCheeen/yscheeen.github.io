@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fannick.github.io/"/>
-  <updated>2022-05-01T09:37:34.844Z</updated>
+  <updated>2022-05-01T09:45:35.379Z</updated>
   <id>https://fannick.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="https://fannick.github.io/test/"/>
     <id>https://fannick.github.io/test/</id>
     <published>2022-05-01T09:37:08.734Z</published>
-    <updated>2022-05-01T09:37:34.844Z</updated>
+    <updated>2022-05-01T09:45:35.379Z</updated>
     
-    <content type="html"><![CDATA[<hr><h2 id="Test"><a href="#Test" class="headerlink" title="Test "></a>Test </h2><p><img src="/Users/yusuchen/Downloads/blog/source/img/test/image-20220501173731823.png" alt="image-20220501173731823"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="../img/test/image-20220501174528642.png" alt="image-20220501174528642"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;hr&gt;
-&lt;h2 id=&quot;Test&quot;&gt;&lt;a href=&quot;#Test&quot; class=&quot;headerlink&quot; title=&quot;Test &quot;&gt;&lt;/a&gt;Test &lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/Users/yusuchen/Downloads/blog/source/img/tes
+        &lt;p&gt;&lt;img src=&quot;../img/test/image-20220501174528642.png&quot; alt=&quot;image-20220501174528642&quot;&gt;&lt;/p&gt;
+
       
     
     </summary>
