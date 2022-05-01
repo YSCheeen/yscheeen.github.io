@@ -2,33 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://fannick.github.io/shopify-app-billing-update/</loc>
-    
-    <lastmod>2022-04-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://fannick.github.io/shopify-liquid/</loc>
-    
-    <lastmod>2022-04-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://fannick.github.io/shopify-liquid-array-filters/</loc>
-    
-    <lastmod>2022-04-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://fannick.github.io/about/index.html</loc>
     
     <lastmod>2022-04-15</lastmod>
@@ -38,34 +11,7 @@
   </url>
   
   <url>
-    <loc>https://fannick.github.io/shopify-themes/</loc>
-    
-    <lastmod>2022-04-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://fannick.github.io/shopify-domain-settings/</loc>
-    
-    <lastmod>2022-04-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://fannick.github.io/startup-compass/</loc>
-    
-    <lastmod>2022-04-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://fannick.github.io/shopify-theme-extensions-instuction/</loc>
     
     <lastmod>2022-04-11</lastmod>
     
@@ -94,61 +40,19 @@
 
   <url>
     <loc>https://fannick.github.io/</loc>
-    <lastmod>2022-04-22</lastmod>
+    <lastmod>2022-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://fannick.github.io/tags/Shopify/</loc>
-    <lastmod>2022-04-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://fannick.github.io/tags/%E7%8B%AC%E7%AB%8B%E7%AB%99/</loc>
-    <lastmod>2022-04-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://fannick.github.io/tags/Shopify-%E6%94%B6%E8%B4%B9%E6%8E%A5%E5%8F%A3/</loc>
-    <lastmod>2022-04-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://fannick.github.io/tags/Liquid/</loc>
-    <lastmod>2022-04-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://fannick.github.io/tags/%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2022-04-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://fannick.github.io/tags/%E5%88%9B%E4%B8%9A/</loc>
-    <lastmod>2022-04-22</lastmod>
+    <lastmod>2022-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
-  
-  <url>
-    <loc>https://fannick.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-04-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>
