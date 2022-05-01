@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://fannick.github.io/test/</loc>
+    <loc>https://fannick.github.io/about/index.html</loc>
     
     <lastmod>2022-05-01</lastmod>
     
@@ -11,18 +11,18 @@
   </url>
   
   <url>
-    <loc>https://fannick.github.io/about/index.html</loc>
+    <loc>https://fannick.github.io/startup-compass/</loc>
     
-    <lastmod>2022-04-15</lastmod>
+    <lastmod>2022-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://fannick.github.io/startup-compass/</loc>
+    <loc>https://fannick.github.io/test/</loc>
     
-    <lastmod>2022-04-11</lastmod>
+    <lastmod>2022-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -56,14 +56,14 @@
 
   
   <url>
-    <loc>https://fannick.github.io/tags/%E7%BF%BB%E8%AF%91/</loc>
+    <loc>https://fannick.github.io/tags/%E5%88%9B%E4%B8%9A/</loc>
     <lastmod>2022-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://fannick.github.io/tags/%E5%88%9B%E4%B8%9A/</loc>
+    <loc>https://fannick.github.io/tags/%E7%BF%BB%E8%AF%91/</loc>
     <lastmod>2022-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
