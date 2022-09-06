@@ -1,0 +1,996 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Suchen陈酥鱼">
+    <title>A Shallow Dive Into Top 500 Dapps On DappRadar (2022) - Suchen陈酥鱼</title>
+    <meta name="author" content="Suchen陈酥鱼">
+    
+    
+    
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Suchen陈酥鱼","sameAs":["https://github.com/YSCheeen","mailto:ysuchloe@gmail.com"],"image":"LOGO1.png"},"articleBody":"\n\n\n\n\n\nBefore Getting Started \nProviding data-driven insights is part of my product operation work content. Months ago, the team were seeking to add the capability of accessing decentralized applications (“dApps”) onto our currently live web3 product. Before proceeding to the next stage, we the dev team needed to provide answers to some general questions raised by the boss and stakeholders, such as “What are dApps?”, “Which blockchains should we choose to support?”,  and “How can we enable our users to access dApps?” Hence, I was asked to look into dApps, so as to offer references for the team to answer those questions. \n\n\n What are dApps? According to ethereum.org’s definition,\n\nA decentralized application (dapp) is an application built on a decentralized network that combines a smart contract and a frontend user interface.  \n\n\n\nDappRadar.com was chosen as it’s one of the most used app store, which tracks over 3,000 dApps across 100+ blockchains. The platform ranks those tracked dApps by specific metrics like daily users, daily volume and more. Therefore, for my purpose (i.e. trying to answer our stakeholders’ rest questions), I targeted at the top 500 dApps on DappRadar, collecting and compiling a variety of public data from the website on the day of June 15, 2022, and produced this report. \n\n\nNotes \n\nAll data collected were the publicly available information on the web. \n\nI’m not a data engineer, and thus I can’t guarantee all the data being properly extracted and processed. Moreover, as of the time writing, all statistics are obsolete. So…don’t be serious.\n\n\n\n\nData Collection Below are what I collected from DappRadar Rankings page on the day of June 15, 2022.\n\nDapp Name\n\nDetail Page URL (link to this dApp’s detail page on DappRadar, for accessing the dApp) \n\nRanking\n\nPrimary blockchain (the blockchain on which this dApp was built)\n\nAdditional blockchains  (applicable to dApps available on multiple blockchains) \n\nCategory\n\nBalance (total amount of incoming value to dapp’s smart contracts)\n\nUsers (number of unique wallet addresses interacting with dapp’s smart contracts)\n\nUser changes (percentage change of user amount within the selected period)\n\nVolume (total value of assets in dapp’s smart contracts)\n\n\n\n\nMy DiscoveriesDapps Deployed BlockchainsPrimary BlockchainsA total number of 41 blockchains were found in the collection. However, 9 blockchains hosted more than two thirds of the top 500 dApps.\n\n\n\n\n\nRank\nBlockchain Network\nNumber of Dapps Built On\n%\n\n\n\n1\nBNB Chain\n118\n23.6%\n\n\n2\nWAX\n58\n11.6%\n\n\n3\nEthereum\n50\n10.0%\n\n\n4\nPolygon\n36\n7.2%\n\n\n5\nThunderCore\n22\n4.4%\n\n\n6\nCronos\n20\n4.0%\n\n\n7\nAvalanche\n15\n3.0%\n\n\n8\nSolana\n15\n3.0%\n\n\n9\nNear\n10\n2.0%\n\n\n\nTotal\n354 dApps\n68.8%\n\n\n\n\nAdditional BlockchainsAn additional blockchain refers to the blockchain on which a dApp is available apart from the one it was built on. \n\n\nDapps Capability Of Running On Multiple Chains\nMost of the dApps could run on only one blockchain, while 58 dApps were found available on more than one blockchain. \n\n\n\n\n\nType\nDApp Count\n%\n\n\n\nMultiple chains\n58\n11.6%\n\n\nSingle chain\n395\n79.0%\n\n\nNull\n47\n9.4%\n\n\n\n\nTo make a dApp available on multiple chains, its developer needs to deploy the dApp, with necessary alterations, on each blockchain, provided that these chains are interoperatable. In this case, the interoperatability is achieved by the following:\n\n\n· Sidechains\nFor example, in the case of WAX being the primary blockchain, 4 dApps were found capable to run on the additional chains EOS and Telos. Their capability were from the interoperatability between the main chain and the side chains: \n\n\n\nEOS - the original main net\nWAX - an EOSIO based side chain\nTELOS - an EOS side-chain\n\nStill in the case of WAX being the primary blockchain, 2 dApps were found the BNB chain as their additional chain. BNB Chain is not a sidechain on EOS. In this scenario, it’s EVM compatibility that enables the WAX chain and  [1]BNB Chain to be interoperable, providing these two dApps with the capability of running on both blockchains. \n\n\n· EVM Compatibility\nEVM stands for Ethereum Virtual Machine. Simply put, EVM is the environment in which all Ethereum accounts and smart contracts live.  Hence, EVM compatible blockchains are independent blockchains of Ethereum but run the EVM. This makes the EVM-compatible blockchains not only be interoperatable with Ethereum, but also with each other. As a result, developers can migrate their dApps from Ethereum to an EVM-compatible chain, or from one EVM compatible blockchain to another, easily making their dApps available on multiple chains.\nOf 9 primary blockchains that hosted more than two thirds of DappRadar top 500 dApps, only one is not EVM compatible.\n\n\n\n\n\n#\nBlockchain Network\nEVM-Compatible\n\n\n\n1\nBNB Chain\nYES\n\n\n2\nWAX\nYES\n\n\n3\nEthereum\nN&#x2F;A\n\n\n4\nPolygon\nYES\n\n\n5\nThunderCore\nYES\n\n\n6\nCronos\nYES\n\n\n7\nAvalanche (C-Chain)\nYES\n\n\n8\nSolana\nYES\n\n\n9\nNear\nNO\n\n\n\n\nDapps AccessibilityIt was very time-consuming to check the accessibility of those dApps because this had to be done manually. As it was not practical to check all 500 dApps on my own, I chose to focus on dApps available on the following 3 blockchain networks:\n\n\n\nEthereum \nPolygon \nTron\n\nThis got me a much smaller collection of 76 dApps, which facilitated my manual check. Below are my check results (as of the day June 16, 2022). \nConnect To A Blockchain Wallet to Start\n\n\nSupported Wallet Type\nCount\n\n\n\nAny WalletConnect-compatible wallets\n51\n\n\nMetaMask and other specific wallets\n5\n\n\nMetaMask only\n11\n\n\nNative wallet only\n9\n\n\nTotal\n76 dApps\n\n\n\n\nTraditional Login Or Download Required\n\n\nType\nCount\n\n\n\nSign up&#x2F;in with email\n8\n\n\nNot a web app. Download its mobile app to start\n3\n\n\nTotal\n11 dApps\n\n\n\n\nUnaccessible\n\n\nType\nCount\n\n\n\n404\n3\n\n\nNo response\n4\n\n\nTotal\n7 dApps\n\n\n\n\nSummaryBased on the discoveries above, the answers to our stakeholders’ questions were clear. \n\n\n\nWhat are dApps? \nAccording to ethereum.org’s definition,\n\nA decentralized application (dapp) is an application built on a decentralized network that combines a smart contract and a frontend user interface.\n\n\n\n\n\n\nWhich blockchains should we choose to support?\nSimply according to the number of dApps hosted on and the interoperatability of the network, good choices could include BNB Chain, WAX, Ethereum, Polygon, ThunderCore, Cronos, Avalanche and Solana.\n\n\n\n\n\nHow can we enable our users to access dApps?\nIt seems that WalletConnect and MetaMask are the most used solutions in the industry to access dApps.\n\n\n\n\nAppendixSoftware Used\nweb data extracting: Octoparse  (plus a handful of manual copy &amp; paste)\ndata processing : Microsoft Excel \ncharts making: Microsoft Excel\n\n\n\nData Collection Sample\n\n\t\n    \n\t\n\n\n\n\n1.BNB Chain is comprised of BNB Beacon Chain and BNB Smart Chain. The latter is an EVM compatible chain. ↩","dateCreated":"2022-09-06T21:30:02+08:00","dateModified":"2022-09-06T21:46:44+08:00","datePublished":"2022-09-06T21:30:02+08:00","description":"Months ago, the team were seeking to add the capability of accessing decentralized applications(that is, dApps) onto our currently live web3 product.","headline":"A Shallow Dive Into Top 500 Dapps On DappRadar (2022)","image":["https://res.cloudinary.com/dogandcat/image/upload/v1662446305/report_makes_cat_yawn_xgnlei.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://yscheeen.github.io/ShallowDiveInDapps/"},"publisher":{"@type":"Organization","name":"Suchen陈酥鱼","sameAs":["https://github.com/YSCheeen","mailto:ysuchloe@gmail.com"],"image":"LOGO1.png","logo":{"@type":"ImageObject","url":"LOGO1.png"}},"url":"https://yscheeen.github.io/ShallowDiveInDapps/","keywords":"English, 那些年接过的奇怪需求","thumbnailUrl":"https://res.cloudinary.com/dogandcat/image/upload/v1662446305/report_makes_cat_yawn_xgnlei.jpg"}</script>
+    <meta name="description" content="Months ago, the team were seeking to add the capability of accessing decentralized applications(that is, dApps) onto our currently live web3 product.">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="A Shallow Dive Into Top 500 Dapps On DappRadar (2022)">
+<meta property="og:url" content="https://yscheeen.github.io/ShallowDiveInDapps/index.html">
+<meta property="og:site_name" content="Suchen陈酥鱼">
+<meta property="og:description" content="Months ago, the team were seeking to add the capability of accessing decentralized applications(that is, dApps) onto our currently live web3 product.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-06T13:30:02.267Z">
+<meta property="article:modified_time" content="2022-09-06T13:46:44.408Z">
+<meta property="article:author" content="Suchen陈酥鱼">
+<meta property="article:tag" content="English">
+<meta property="article:tag" content="那些年接过的奇怪需求">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://yscheeen.github.io/assets/images/LOGO1.png"/>
+    
+    
+        <meta property="og:image" content="https://res.cloudinary.com/dogandcat/image/upload/v1662446305/report_makes_cat_yawn_xgnlei.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://res.cloudinary.com/dogandcat/image/upload/v1662446305/report_makes_cat_yawn_xgnlei.jpg"/>
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/style-c09vdpmf92qtkwkl0vrlll2lzlkhqw4mzcttrdo1f68vgqlfqncrhdvqujbn.min.css">
+
+    <!--STYLES END-->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPNJMDPS8Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XPNJMDPS8Z');
+    </script>
+
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/"
+            aria-label=""
+        >
+            Suchen陈酥鱼
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="打开链接: /#about"
+            >
+        
+        
+            <img class="header-picture" src="/assets/images/LOGO1.png" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a
+                    href="/#about"
+                    aria-label="阅读有关作者的更多信息"
+                >
+                    <img class="sidebar-profile-picture" src="/assets/images/LOGO1.png" alt="作者的图片"/>
+                </a>
+                <h4 class="sidebar-profile-name">Suchen陈酥鱼</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>时不时要跟产品干架的UX Writer，耕耘不畅销书市场的兼职译者</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="首页"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="分类"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="标签"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="归档"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="搜索"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">搜索</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="关于"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/YSCheeen"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="mailto:ysuchloe@gmail.com"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="邮箱"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">邮箱</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            A Shallow Dive Into Top 500 Dapps On DappRadar (2022)
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2022-09-06T21:30:02+08:00">
+	
+		    9月 06, 2022
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/Product-Operation-%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5/">Product Operation 产品运营</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><br/>
+
+<h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Data-Collection"><span class="toc-text">Data Collection</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#My-Discoveries"><span class="toc-text">My Discoveries</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Dapps-Deployed-Blockchains"><span class="toc-text">Dapps Deployed Blockchains</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Primary-Blockchains"><span class="toc-text">Primary Blockchains</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Additional-Blockchains"><span class="toc-text">Additional Blockchains</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dapps-Accessibility"><span class="toc-text">Dapps Accessibility</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-To-A-Blockchain-Wallet-to-Start"><span class="toc-text">Connect To A Blockchain Wallet to Start</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Traditional-Login-Or-Download-Required"><span class="toc-text">Traditional Login Or Download Required</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unaccessible"><span class="toc-text">Unaccessible</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Summary"><span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Appendix"><span class="toc-text">Appendix</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Software-Used"><span class="toc-text">Software Used</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Collection-Sample"><span class="toc-text">Data Collection Sample</span></a></li></ol></li></ol>
+
+<br/>
+
+<p><strong>Before Getting Started</strong> </p>
+<p>Providing data-driven insights is part of my product operation work content. Months ago, the team were seeking to add the capability of accessing decentralized applications (“dApps”) onto our currently live web3 product. Before proceeding to the next stage, we the dev team needed to provide answers to some general questions raised by the boss and stakeholders, such as “What are dApps?”, “Which blockchains should we choose to support?”,  and “How can we enable our users to access dApps?” Hence, I was asked to look into dApps, so as to offer references for the team to answer those questions. </p>
+<br/>
+
+<p> <strong>What are dApps?</strong> According to <a target="_blank" rel="noopener" href="https://ethereum.org/en/developers/docs/dapps/">ethereum.org’s definition</a>,</p>
+<blockquote>
+<p>A decentralized application (dapp) is an application built on a decentralized network that combines a <a target="_blank" rel="noopener" href="https://ethereum.org/en/developers/docs/smart-contracts/">smart contract</a> and a frontend user interface.  </p>
+</blockquote>
+<br/>
+
+<p><a target="_blank" rel="noopener" href="https://dappradar.com/">DappRadar.com</a> was chosen as it’s one of the most used app store, which tracks over 3,000 dApps across 100+ blockchains. The platform ranks those tracked dApps by specific metrics like daily users, daily volume and more. Therefore, for my purpose (i.e. trying to answer our stakeholders’ rest questions), I targeted at the top 500 dApps on DappRadar, collecting and compiling a variety of public data from the website on the day of June 15, 2022, and produced this report. </p>
+<br/>
+
+<p><strong>Notes</strong> </p>
+<ul>
+<li><p>All data collected were the publicly available information on the web. </p>
+</li>
+<li><p>I’m not a data engineer, and thus I can’t guarantee all the data being properly extracted and processed. Moreover, as of the time writing, all statistics are obsolete. So…don’t be serious.</p>
+</li>
+</ul>
+<br/>
+
+<h1 id="Data-Collection"><a href="#Data-Collection" class="headerlink" title="Data Collection"></a>Data Collection</h1><p> Below are what I collected from <a target="_blank" rel="noopener" href="https://dappradar.com/rankings">DappRadar Rankings page</a> on the day of June 15, 2022.</p>
+<ul>
+<li><p><strong>Dapp Name</strong></p>
+</li>
+<li><p><strong>Detail Page URL</strong> (link to this dApp’s detail page on DappRadar, for accessing the dApp) </p>
+</li>
+<li><p><strong>Ranking</strong></p>
+</li>
+<li><p><strong>Primary blockchain</strong> (the blockchain on which this dApp was built)</p>
+</li>
+<li><p><strong>Additional blockchains</strong>  (applicable to dApps available on multiple blockchains) </p>
+</li>
+<li><p><strong>Category</strong></p>
+</li>
+<li><p><strong>Balance</strong> (total amount of incoming value to dapp’s smart contracts)</p>
+</li>
+<li><p><strong>Users</strong> (number of unique wallet addresses interacting with dapp’s smart contracts)</p>
+</li>
+<li><p><strong>User changes</strong> (percentage change of user amount within the selected period)</p>
+</li>
+<li><p><strong>Volume</strong> (total value of assets in dapp’s smart contracts)</p>
+</li>
+</ul>
+<br/>
+
+<h1 id="My-Discoveries"><a href="#My-Discoveries" class="headerlink" title="My Discoveries"></a>My Discoveries</h1><h2 id="Dapps-Deployed-Blockchains"><a href="#Dapps-Deployed-Blockchains" class="headerlink" title="Dapps Deployed Blockchains"></a>Dapps Deployed Blockchains</h2><h3 id="Primary-Blockchains"><a href="#Primary-Blockchains" class="headerlink" title="Primary Blockchains"></a>Primary Blockchains</h3><p>A total number of 41 blockchains were found in the collection. However, <strong>9</strong> blockchains hosted more than two thirds of the top 500 dApps.</p>
+<br/>
+
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Blockchain Network</th>
+<th>Number of Dapps Built On</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>BNB Chain</td>
+<td>118</td>
+<td>23.6%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>WAX</td>
+<td>58</td>
+<td>11.6%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ethereum</td>
+<td>50</td>
+<td>10.0%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Polygon</td>
+<td>36</td>
+<td>7.2%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ThunderCore</td>
+<td>22</td>
+<td>4.4%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Cronos</td>
+<td>20</td>
+<td>4.0%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Avalanche</td>
+<td>15</td>
+<td>3.0%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Solana</td>
+<td>15</td>
+<td>3.0%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Near</td>
+<td>10</td>
+<td>2.0%</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>354 dApps</strong></td>
+<td><strong>68.8%</strong></td>
+</tr>
+</tbody></table>
+<br/>
+
+<h3 id="Additional-Blockchains"><a href="#Additional-Blockchains" class="headerlink" title="Additional Blockchains"></a>Additional Blockchains</h3><p>An additional blockchain refers to the blockchain on which a dApp is available apart from the one it was built on. </p>
+<br/>
+
+<p><strong>Dapps Capability Of Running On Multiple Chains</strong></p>
+<p>Most of the dApps could run on only one blockchain, while 58 dApps were found available on more than one blockchain. </p>
+<br/>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>DApp Count</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Multiple chains</td>
+<td>58</td>
+<td>11.6%</td>
+</tr>
+<tr>
+<td>Single chain</td>
+<td>395</td>
+<td>79.0%</td>
+</tr>
+<tr>
+<td>Null</td>
+<td>47</td>
+<td>9.4%</td>
+</tr>
+</tbody></table>
+<br/>
+
+<p>To make a dApp available on multiple chains, its developer needs to deploy the dApp, with necessary alterations, on each blockchain, provided that these chains are interoperatable. In this case, the interoperatability is achieved by the following:</p>
+<br/>
+
+<p><strong>· Sidechains</strong></p>
+<p>For example, in the case of WAX being the primary blockchain, 4 dApps were found capable to run on the additional chains EOS and Telos. Their capability were from the interoperatability between the main chain and the side chains: </p>
+<br/>
+
+<ul>
+<li>EOS - the original main net</li>
+<li>WAX - an EOSIO based side chain</li>
+<li>TELOS - an EOS side-chain</li>
+</ul>
+<p>Still in the case of WAX being the primary blockchain, 2 dApps were found the BNB chain as their additional chain. BNB Chain is not a sidechain on EOS. In this scenario, it’s EVM compatibility that enables the WAX chain and  <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label=" BNB Chain is comprised of [BNB Beacon Chain and BNB Smart Chain.](https://www.binance.com/en/support/announcement/854415cf3d214371a7b60cf01ead0918) The latter is an EVM compatible chain.">[1]</span></a></sup>BNB Chain to be interoperable, providing these two dApps with the capability of running on both blockchains. </p>
+<br/>
+
+<p><strong>· EVM Compatibility</strong></p>
+<p>EVM stands for Ethereum Virtual Machine. Simply put, EVM is <a target="_blank" rel="noopener" href="https://ethereum.org/en/developers/docs/evm/">the environment in which all Ethereum accounts and smart contracts live.</a>  Hence, EVM compatible blockchains are <em>independent</em> blockchains of Ethereum but run the EVM. This makes the EVM-compatible blockchains not only be interoperatable with Ethereum, but also with each other. As a result, developers can migrate their dApps from Ethereum to an EVM-compatible chain, or from one EVM compatible blockchain to another, easily making their dApps available on multiple chains.</p>
+<p>Of 9 primary blockchains that hosted more than two thirds of DappRadar top 500 dApps, only one is not EVM compatible.</p>
+<br/>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Blockchain Network</th>
+<th>EVM-Compatible</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>BNB Chain</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>2</td>
+<td>WAX</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ethereum</td>
+<td>N&#x2F;A</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Polygon</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ThunderCore</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Cronos</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Avalanche (C-Chain)</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Solana</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Near</td>
+<td>NO</td>
+</tr>
+</tbody></table>
+<br/>
+
+<h2 id="Dapps-Accessibility"><a href="#Dapps-Accessibility" class="headerlink" title="Dapps Accessibility"></a>Dapps Accessibility</h2><p>It was very time-consuming to check the accessibility of those dApps because this had to be done manually. As it was not practical to check all 500 dApps on my own, I chose to focus on dApps available on the following 3 blockchain networks:</p>
+<br/>
+
+<ul>
+<li>Ethereum </li>
+<li>Polygon </li>
+<li>Tron</li>
+</ul>
+<p>This got me a much smaller collection of 76 dApps, which facilitated my manual check. Below are my check results (as of the day June 16, 2022). </p>
+<h3 id="Connect-To-A-Blockchain-Wallet-to-Start"><a href="#Connect-To-A-Blockchain-Wallet-to-Start" class="headerlink" title="Connect To A Blockchain Wallet to Start"></a>Connect To A Blockchain Wallet to Start</h3><table>
+<thead>
+<tr>
+<th align="left">Supported Wallet Type</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Any WalletConnect-compatible wallets</td>
+<td>51</td>
+</tr>
+<tr>
+<td align="left">MetaMask and other specific wallets</td>
+<td>5</td>
+</tr>
+<tr>
+<td align="left">MetaMask only</td>
+<td>11</td>
+</tr>
+<tr>
+<td align="left">Native wallet only</td>
+<td>9</td>
+</tr>
+<tr>
+<td align="left"><strong>Total</strong></td>
+<td><strong>76 dApps</strong></td>
+</tr>
+</tbody></table>
+<br/>
+
+<h3 id="Traditional-Login-Or-Download-Required"><a href="#Traditional-Login-Or-Download-Required" class="headerlink" title="Traditional Login Or Download Required"></a>Traditional Login Or Download Required</h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sign up&#x2F;in with email</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Not a web app. Download its mobile app to start</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>11 dApps</strong></td>
+</tr>
+</tbody></table>
+<br/>
+
+<h3 id="Unaccessible"><a href="#Unaccessible" class="headerlink" title="Unaccessible"></a>Unaccessible</h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>404</td>
+<td>3</td>
+</tr>
+<tr>
+<td>No response</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>7 dApps</strong></td>
+</tr>
+</tbody></table>
+<br/>
+
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>Based on the discoveries above, the answers to our stakeholders’ questions were clear. </p>
+<br/>
+
+<ul>
+<li><p><strong>What are dApps?</strong> </p>
+<p>According to <a target="_blank" rel="noopener" href="https://ethereum.org/en/developers/docs/dapps/">ethereum.org’s definition</a>,</p>
+<blockquote>
+<p>A decentralized application (dapp) is an application built on a decentralized network that combines a <a target="_blank" rel="noopener" href="https://ethereum.org/en/developers/docs/smart-contracts/">smart contract</a> and a frontend user interface.</p>
+</blockquote>
+</li>
+</ul>
+<br/>
+
+<ul>
+<li><p><strong>Which blockchains should we choose to support?</strong></p>
+<p>Simply according to the number of dApps hosted on and the interoperatability of the network, good choices could include BNB Chain, WAX, Ethereum, Polygon, ThunderCore, Cronos, Avalanche and Solana.</p>
+</li>
+</ul>
+<br/>
+
+<ul>
+<li><p><strong>How can we enable our users to access dApps?</strong></p>
+<p>It seems that WalletConnect and MetaMask are the most used solutions in the industry to access dApps.</p>
+</li>
+</ul>
+<br/>
+
+<h1 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h1><h2 id="Software-Used"><a href="#Software-Used" class="headerlink" title="Software Used"></a>Software Used</h2><ul>
+<li>web data extracting: <strong><a target="_blank" rel="noopener" href="https://www.octoparse.com/">Octoparse </a></strong> (plus a handful of manual copy &amp; paste)</li>
+<li>data processing : <strong>Microsoft Excel</strong> </li>
+<li>charts making: <strong>Microsoft Excel</strong></li>
+</ul>
+<br/>
+
+<h2 id="Data-Collection-Sample"><a href="#Data-Collection-Sample" class="headerlink" title="Data Collection Sample"></a>Data Collection Sample</h2>
+
+	<div class="row">
+    <embed src="./Data_Sample.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">BNB Chain is comprised of <a target="_blank" rel="noopener" href="https://www.binance.com/en/support/announcement/854415cf3d214371a7b60cf01ead0918">BNB Beacon Chain and BNB Smart Chain.</a> The latter is an EVM compatible chain.<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-none-link" href="/tags/English/" rel="tag">English</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%8E%A5%E8%BF%87%E7%9A%84%E5%A5%87%E6%80%AA%E9%9C%80%E6%B1%82/" rel="tag">那些年接过的奇怪需求</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/DeveloperAnalysisOnCMC300/"
+                    data-tooltip="A Developer Analysis On CoinMarketCap Top 300 Cryptocurrencies (2021)"
+                    aria-label="下一篇: A Developer Analysis On CoinMarketCap Top 300 Cryptocurrencies (2021)"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://yscheeen.github.io/ShallowDiveInDapps/"
+                    title="分享到 Facebook"
+                    aria-label="分享到 Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://yscheeen.github.io/ShallowDiveInDapps/"
+                    title="分享到 Twitter"
+                    aria-label="分享到 Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://yscheeen.github.io/ShallowDiveInDapps/"
+                    title="分享到 Google+"
+                    aria-label="分享到 Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="目录">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2022 Suchen陈酥鱼. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/DeveloperAnalysisOnCMC300/"
+                    data-tooltip="A Developer Analysis On CoinMarketCap Top 300 Cryptocurrencies (2021)"
+                    aria-label="下一篇: A Developer Analysis On CoinMarketCap Top 300 Cryptocurrencies (2021)"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://yscheeen.github.io/ShallowDiveInDapps/"
+                    title="分享到 Facebook"
+                    aria-label="分享到 Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://yscheeen.github.io/ShallowDiveInDapps/"
+                    title="分享到 Twitter"
+                    aria-label="分享到 Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://yscheeen.github.io/ShallowDiveInDapps/"
+                    title="分享到 Google+"
+                    aria-label="分享到 Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="目录">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://yscheeen.github.io/ShallowDiveInDapps/"
+                        aria-label="分享到 Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>分享到 Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=https://yscheeen.github.io/ShallowDiveInDapps/"
+                        aria-label="分享到 Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=https://yscheeen.github.io/ShallowDiveInDapps/"
+                        aria-label="分享到 Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/LOGO1.png" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">Suchen陈酥鱼</h4>
+        
+            <div id="about-card-bio"><p>时不时要跟产品干架的UX Writer，耕耘不畅销书市场的兼职译者</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>专业折耳根种植</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/script-5m25v2eokbsafy7jqyujfpqorvzwhhklfb9qs2r5zu2ticnqlrhiaptenbju.min.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    </body>
+</html>
